@@ -1,13 +1,13 @@
 # dumpvdl2
 
-dumpvdl2 is a VDL Mode 2 message decoder and protocol analyzer.
+dumpvdl2 is a VDL Mode 2 message decoder and protocol analyzer. This is a (more) portable fork of szpajder's original version which does not use the (performance-increasing) GNU (glibc) extension sincosf that is not supported by NetBSD's (and other) libc(s)
 
-Current stable version: 2.1.0 (released November 7, 2020)
+Based on szpajder's 2.1.0 (released November 7, 2020)
 
 ## Features
 
 - Runs under Linux (tested on: x86, x86-64, ARM) and MacOS (not tested very
-  well, feedback welcome)
+  well, feedback welcome), NetBSD (tested with IQ sample file on 9.0 earmv6hf; some post-build hacking required; only runs from the build directory as make install does not work)
 - Supports following SDR hardware:
   - RTLSDR (via [rtl-sdr library](http://osmocom.org/projects/sdr/wiki/rtl-sdr))
   - Mirics SDR (via [libmirisdr-4](https://github.com/f4exb/libmirisdr-4))
